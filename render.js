@@ -1,3 +1,12 @@
+const onePiece = [
+    { titulo: 'One Piece', volume: '1', imagem: 'assets/capaOnePieceVolUm.webp', rating: 0, possui: false },
+    { titulo: 'One Piece', volume: '2', imagem: 'assets/capaOnePieceVolDois.webp', rating: 0, possui: false },
+    { titulo: 'One Piece', volume: '2', imagem: 'assets/capaOnePieceVolTreswebp.webp', rating: 0, possui: false },
+    { titulo: 'One Piece', volume: '4', imagem: 'assets/capaOnePieceVolQuatro.webp', rating: 0, possui: false },
+
+
+];
+
 document.addEventListener('DOMContentLoaded', () => {
     const userInfo = document.getElementById('user-info');
     const loginForm = document.getElementById('login-form');
@@ -22,8 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentUser = savedUsername;
         usernameInput.value = savedUsername;
         loadUserData(savedUsername);
-        userInfo.classList.add( 'font-bold', 'pt-14');
-
+        userInfo.classList.add('pt-8');
         userInfo.textContent = `Bem Vindo de Volta ${currentUser}`;
     } else {
         renderVolumes(onePiece);
@@ -47,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         volumeList.innerHTML = '';
         data.forEach((item, index) => {
             const listItem = document.createElement('li');
-            listItem.classList.add('mb-4', 'p-4', 'border', 'border-gray-200', 'rounded-lg', 'shadow-md', 'bg-white', 'flex', 'flex-col', 'items-center');
+            listItem.classList.add('mb-4', 'p-1', 'border', 'border-gray-200', 'rounded-lg', 'shadow-md', 'bg-white', 'flex', 'flex-col', 'items-center');
 
             const img = document.createElement('img');
             img.src = item.imagem;
