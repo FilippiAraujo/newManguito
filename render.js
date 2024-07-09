@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentUser = savedUsername;
         usernameInput.value = savedUsername;
         loadUserData(savedUsername);
-        userInfo.classList.add('font-bold', 'pt-14');
+        userInfo.classList.add( 'font-bold', 'pt-14');
 
         userInfo.textContent = `Bem Vindo de Volta ${currentUser}`;
     } else {
