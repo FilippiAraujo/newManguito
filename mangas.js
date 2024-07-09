@@ -1,84 +1,124 @@
 const onePiece = [
-    { titulo: 'One Piece', volume: '1', imagem: 'assets/capaOnePieceVolUm.webp', rating: 4 },
-    { titulo: 'One Piece', volume: '2', imagem: 'assets/capaOnePieceVolDois.webp', rating: 5 },
-    { titulo: 'One Piece', volume: '3', imagem: 'assets/capaOnePieceVolTreswebp.webp', rating: 5 },
-    { titulo: 'One Piece', volume: '4', imagem: 'assets/capaOnePieceVolQuatro.webp', rating: 5 },
-
-
-    // Adicione mais volumes aqui conforme necessário
+    { titulo: 'One Piece', volume: '1', imagem: 'assets/capaOnePieceVolUm.webp', rating: 5, possui: false },
+    { titulo: 'One Piece', volume: '2', imagem: 'assets/capaOnePieceVolDois.webp', rating: 5, possui: false },
+    { titulo: 'One Piece', volume: '3', imagem: 'assets/capaOnePieceVolTreswebp.webp', rating: 5, possui: false },
+    { titulo: 'One Piece', volume: '4', imagem: 'assets/capaOnePieceVolQuatro.webp', rating: 5, possui: false },
 ];
 
-// Função para salvar os dados no localStorage
-function saveToLocalStorage(data) {
-    localStorage.setItem('onePieceRatings', JSON.stringify(data));
-}
-
-// Função para carregar os dados do localStorage
-function loadFromLocalStorage() {
-    const data = localStorage.getItem('onePieceRatings');
-    return data ? JSON.parse(data) : null;
-}
-
-// Carregar dados do localStorage se existirem
-const savedData = loadFromLocalStorage();
-if (savedData) {
-    for (let i = 0; i < onePiece.length; i++) {
-        if (savedData[i]) {
-            onePiece[i].rating = savedData[i].rating;
-        }
-    }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('login-form');
     const volumeList = document.getElementById('volume-list');
+    const loginButton = document.getElementById('login-button');
+    const usernameInput = document.getElementById('username');
 
-    onePiece.forEach((item, index) => {
-        const listItem = document.createElement('li');
-        listItem.classList.add('mb-4', 'p-4', 'border', 'border-gray-200', 'rounded-lg', 'shadow-md', 'bg-white', 'flex', 'flex-col', 'items-center');
+    let currentUser = null;
 
-        const img = document.createElement('img');
-        img.src = item.imagem;
-        img.alt = `Volume ${item.volume}`;
-        img.classList.add('w-32', 'h-48', 'mb-4', 'object-cover', 'rounded');
-
-        const textContainer = document.createElement('div');
-        textContainer.classList.add('text-center');
-
-        const titleSpan = document.createElement('span');
-        titleSpan.textContent = `Title: ${item.titulo}`;
-        titleSpan.classList.add('font-bold', 'block', 'text-lg', 'mb-1');
-
-        const volumeSpan = document.createElement('span');
-        volumeSpan.textContent = `Volume: ${item.volume}`;
-        volumeSpan.classList.add('text-gray-600', 'block');
-
-        textContainer.appendChild(titleSpan);
-        textContainer.appendChild(volumeSpan);
-
-        const ratingContainer = document.createElement('div');
-        ratingContainer.classList.add('rating', 'flex', 'justify-center', 'mt-2');
-
-        for (let i = 1; i <= 5; i++) {
-            const star = document.createElement('input');
-            star.type = 'radio';
-            star.name = `rating-${index}`;
-            star.classList.add('mask', 'mask-star-2', 'bg-orange-400');
-            star.value = i;
-            if (i === item.rating) {
-                star.checked = true;
-            }
-            star.addEventListener('change', () => {
-                onePiece[index].rating = i;
-                saveToLocalStorage(onePiece);
-                console.log(`Updated rating for ${item.titulo} Volume ${item.volume}: ${i}`);
-            });
-            ratingContainer.appendChild(star);
+    loginButton.addEventListener('click', () => {
+        const username = usernameInput.value.trim();
+        if (username) {
+            currentUser = username;
+            localStorage.setItem('username', username);
+            loadUserData(username);
+            loginForm.classList.add('hidden');
         }
-
-        listItem.appendChild(img);
-        listItem.appendChild(textContainer);
-        listItem.appendChild(ratingContainer);
-
-        volumeList.appendChild(listItem);
     });
+
+    const savedUsername = localStorage.getItem('username');
+    if (savedUsername) {
+        currentUser = savedUsername;
+        usernameInput.value = savedUsername;
+        loadUserData(savedUsername);
+        loginForm.classList.add('hidden');
+    } else {
+        renderVolumes(onePiece);
+    }
+
+    function loadUserData(username) {
+        const userData = loadFromLocalStorage(username) || onePiece;
+        renderVolumes(userData);
+    }
+
+    function saveToLocalStorage(username, data) {
+        localStorage.setItem(`onePieceRatings_${username}`, JSON.stringify(data));
+    }
+
+    function loadFromLocalStorage(username) {
+        const data = localStorage.getItem(`onePieceRatings_${username}`);
+        return data ? JSON.parse(data) : null;
+    }
+
+    function renderVolumes(data) {
+        volumeList.innerHTML = '';
+        data.forEach((item, index) => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('mb-4', 'p-4', 'border', 'border-gray-200', 'rounded-lg', 'shadow-md', 'bg-white', 'flex', 'flex-col', 'items-center');
+
+            const img = document.createElement('img');
+            img.src = item.imagem;
+            img.alt = `Volume ${item.volume}`;
+            img.classList.add('w-32', 'h-48', 'mb-4', 'object-cover', 'rounded');
+
+            const textContainer = document.createElement('div');
+            textContainer.classList.add('text-center');
+
+            const titleSpan = document.createElement('span');
+            titleSpan.textContent = `Title: ${item.titulo}`;
+            titleSpan.classList.add('font-bold', 'block', 'text-lg', 'mb-1');
+
+            const volumeSpan = document.createElement('span');
+            volumeSpan.textContent = `Volume: ${item.volume}`;
+            volumeSpan.classList.add('text-gray-600', 'block');
+
+            textContainer.appendChild(titleSpan);
+            textContainer.appendChild(volumeSpan);
+
+            const ratingContainer = document.createElement('div');
+            ratingContainer.classList.add('rating', 'flex', 'justify-center', 'mt-2');
+
+            for (let i = 1; i <= 5; i++) {
+                const star = document.createElement('input');
+                star.type = 'radio';
+                star.name = `rating-${index}`;
+                star.classList.add('mask', 'mask-star-2', 'bg-orange-400');
+                star.value = i;
+                if (i === item.rating) {
+                    star.checked = true;
+                }
+                star.addEventListener('change', () => {
+                    data[index].rating = i;
+                    if (currentUser) {
+                        saveToLocalStorage(currentUser, data);
+                    }
+                });
+                ratingContainer.appendChild(star);
+            }
+
+            const possessContainer = document.createElement('div');
+            possessContainer.classList.add('flex', 'items-center', 'mt-2');
+
+            const possessLabel = document.createElement('label');
+            possessLabel.classList.add('mr-2');
+            possessLabel.textContent = 'Possui:';
+
+            const possessCheckbox = document.createElement('input');
+            possessCheckbox.type = 'checkbox';
+            possessCheckbox.checked = item.possui;
+            possessCheckbox.addEventListener('change', () => {
+                data[index].possui = possessCheckbox.checked;
+                if (currentUser) {
+                    saveToLocalStorage(currentUser, data);
+                }
+            });
+
+            possessContainer.appendChild(possessLabel);
+            possessContainer.appendChild(possessCheckbox);
+
+            listItem.appendChild(img);
+            listItem.appendChild(textContainer);
+            listItem.appendChild(ratingContainer);
+            listItem.appendChild(possessContainer);
+
+            volumeList.appendChild(listItem);
+        });
+    }
 });
