@@ -1,108 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manguito Tracker</title>
     <link href="/src/output.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/logoManguito.png">
-    <title>Manguito Tracker</title>
 </head>
 <body>
 
-
+    <!-- Cabeçalho -->
     <header class="bg-white">
         <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-            <button href="index.html">
-                <img src="assets/logoManguito.png " class="size-20" href="index.html"/>    
-            </button>  
-          <div class="flex flex-1 items-center justify-end md:justify-between">
-            <nav aria-label="Global" class="hidden md:block">
-              <ul class="flex items-center gap-6 text-sm">
-                <li>
-                  <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> About </a>
-                </li>
-      
-                <li>
-                  <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Careers </a>
-                </li>
-      
-                <li>
-                  <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> History </a>
-                </li>
-      
-                <li>
-                  <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a>
-                </li>
-      
-                <li>
-                  <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </a>
-                </li>
-      
-                <li>
-                  <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
-                </li>
-              </ul>
-            </nav>
-      
-            <div class="flex items-center gap-4">
-              <div class="sm:flex sm:gap-4">
-                <button class="btn" onclick="my_modal_5.showModal()">Login</button>
-                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                    <div class="modal-box">
-                        <div id="login-form" class="flex justify-center mb-6">
-                            <input type="text" id="username" placeholder="Username" class="input input-bordered mr-2" />
-                            <button id="login-button" class="btn btn-primary">Login</button>
-                        </div>
-                      <div class="modal-action">
-                        <form method="dialog">
-                          <!-- if there is a button in form, it will close the modal -->
-                          <button class="btn">Close</button>
-                        </form>
-                      </div>
+            <a href="index.html">
+                <img src="assets/logoManguito.png" class="size-20"/>
+            </a>  
+            <div class="flex flex-1 items-center justify-end md:justify-between">
+                <nav aria-label="Global" class="hidden md:block">
+                    <ul class="flex items-center gap-6 text-sm">
+                        <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#">About</a></li>
+                        <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#">Careers</a></li>
+                        <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#">History</a></li>
+                        <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#">Services</a></li>
+                        <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#">Projects</a></li>
+                        <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#">Blog</a></li>
+                    </ul>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <div class="sm:flex sm:gap-4">
+                        <!-- Botão de Login -->
+                        <button class="btn" onclick="loginModal.showModal()">Login</button>
+                        <!-- Modal de Login -->
+                        <dialog id="loginModal" class="modal modal-bottom sm:modal-middle">
+                            <div class="modal-box">
+                                <div id="login-form" class="flex flex-col justify-center mb-6">
+                                    <input type="email" id="email" placeholder="Email" class="input input-bordered mb-2" />
+                                    <input type="password" id="password" placeholder="Senha" class="input input-bordered mb-2" />
+                                    <button id="login-button" class="btn btn-primary">Login</button>
+                                </div>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <button class="btn">Fechar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+
+                        <!-- Botão de Logout -->
+                        <button id="logout-button" class="btn btn-secondary hidden">Logout</button>
+
+                        <!-- Botão de Registro -->
+                        <button class="btn" onclick="registerModal.showModal()">Registrar</button>
+                        <!-- Modal de Registro -->
+                        <dialog id="registerModal" class="modal modal-bottom sm:modal-middle">
+                            <div class="modal-box">
+                                <div id="register-form" class="flex flex-col justify-center mb-6">
+                                    <input type="email" id="register-email" placeholder="Email" class="input input-bordered mb-2" />
+                                    <input type="password" id="register-password" placeholder="Senha" class="input input-bordered mb-2" />
+                                    <button id="register-button" class="btn btn-primary">Registrar</button>
+                                </div>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <button class="btn">Fechar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
-                  </dialog>
-                
-      
-                <a
-                  class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block"
-                  href="#"
-                >
-                  Register
-                </a>
-              </div>
-      
-              <button
-                class="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
-              >
-                <span class="sr-only">Toggle menu</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
+
+                    <!-- Botão para dispositivos móveis -->
+                    <button class="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
+                        <span class="sr-only">Toggle menu</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-      </header>
+    </header>
 
+    <!-- Informação do Usuário -->
+    <div id="user-info" class="text-center mb-4 text-lg font-bold"></div>
 
-      <div id="user-info" class="text-center mb-4 text-lg font-bold"></div>
-
-
-
+    <!-- Seção de Volume -->
     <div id="volume-section" class="flex justify-center p-6">
         <ul id="volume-list" class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-screen-lg">
         </ul>
     </div>
 
-   
+    <!-- Scripts do Firebase (versão compat) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script>
+        // Configuração do Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyDEdj7Y-_i2zs5tIxgND8onSTHT1d0zY0U",
+            authDomain: "testemangas.firebaseapp.com",
+            projectId: "testemangas",
+            storageBucket: "testemangas.appspot.com",
+            messagingSenderId: "1067822983743",
+            appId: "1:1067822983743:web:2ecc2ff81e0fd77eff668a",
+            measurementId: "G-ZYSHK6FQL8"
+        };
 
+        // Inicialize o Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+    </script>
+
+    <!-- Seus scripts personalizados -->
     <script src="login.js"></script>
     <script src="render.js"></script>
 
