@@ -5,11 +5,11 @@ if (typeof currentUser === 'undefined' || currentUser === null) {
   
   // Dados padrão dos volumes
   const defaultVolumes = [
-    { titulo: 'One Piece', volume: '1', imagem: 'assets/capaOnePieceVolUm.webp', rating: 0, possui: false },
-    { titulo: 'One Piece', volume: '2', imagem: 'assets/capaOnePieceVolDois.webp', rating: 0, possui: false },
-    { titulo: 'One Piece', volume: '3', imagem: 'assets/capaOnePieceVolTreswebp.webp', rating: 0, possui: false },
-    { titulo: 'One Piece', volume: '4', imagem: 'assets/capaOnePieceVolQuatro.webp', rating: 0, possui: false },
-    { titulo: 'One Piece', volume: '5', imagem: 'assets/capaOnePieceVolCinco.webp', rating: 0, possui: false },
+    { titulo: 'One Piece', volume: '1', imagem: '/assets/capaOnePieceVolUm.webp', rating: 0, possui: false },
+    { titulo: 'One Piece', volume: '2', imagem: '/assets/capaOnePieceVolDois.webp', rating: 0, possui: false },
+    { titulo: 'One Piece', volume: '3', imagem: '/assets/capaOnePieceVolTreswebp.webp', rating: 0, possui: false },
+    { titulo: 'One Piece', volume: '4', imagem: '/assets/capaOnePieceVolQuatro.webp', rating: 0, possui: false },
+    { titulo: 'One Piece', volume: '5', imagem: '/assets/capaOnePieceVolCinco.webp', rating: 0, possui: false },
   ];
   
   // Referência ao elemento volumeList
