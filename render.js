@@ -50,12 +50,12 @@ if (typeof currentUser === 'undefined' || currentUser === null) {
     volumeList.innerHTML = '';
     data.forEach((item, index) => {
       const listItem = document.createElement('li');
-      listItem.classList.add('mb-4', 'p-1', 'border', 'border-gray-200', 'rounded-lg', 'shadow-md', 'bg-white', 'flex', 'flex-col', 'items-center');
+      listItem.classList.add('mb-4', 'p-4', 'rounded-lg', 'bg-gray-800', 'flex', 'flex-col', 'items-center');
   
       const img = document.createElement('img');
       img.src = item.imagem;
       img.alt = `Volume ${item.volume}`;
-      img.classList.add('w-32', 'h-48', 'mb-4', 'object-cover', 'rounded');
+      img.classList.add('w-32', 'object-cover', 'rounded');
   
       const textContainer = document.createElement('div');
       textContainer.classList.add('text-center');
