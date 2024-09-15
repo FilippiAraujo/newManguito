@@ -15,6 +15,7 @@ const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
 const registerModal = document.getElementById('registerModal');
 const registerSubmitButton = document.getElementById('register-submit-button');
+const registerName = document.getElementById('register-name');
 const registerEmail = document.getElementById('register-email');
 const registerPassword = document.getElementById('register-password');
 
@@ -54,16 +55,29 @@ logoutButton.addEventListener('click', () => {
 
 // Evento de clique no botão de registro
 registerSubmitButton.addEventListener('click', () => {
+  const name = registerName.value;
   const email = registerEmail.value;
   const password = registerPassword.value;
 
-  // Criação de novo usuário com Firebase
+  // Criação de novo usuário com Firebase (apenas email e senha)
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
       // Registro bem-sucedido
       const user = userCredential.user;
-      showMessage(`Usuário registrado: ${user.email}`);
+      // Atualizar o perfil do usuário com o nome
+      return user.updateProfile({
+        displayName: name
+      });
+    })
+    .then(() => {
+      // Perfil atualizado com sucesso
+      const user = firebase.auth().currentUser;
+      showMessage(`Usuário registrado: ${user.displayName} (${user.email})`);
       registerModal.close(); // Fecha o modal após registro
+      // Limpar campos de entrada
+      registerName.value = '';
+      registerEmail.value = '';
+      registerPassword.value = '';
     })
     .catch((error) => {
       // Tratar erros
@@ -77,7 +91,7 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     // Usuário está logado
     currentUser = user; // Armazenar o objeto do usuário
-    showMessage(`Usuário logado: ${user.email}`);
+    showMessage(`Usuário logado: ${user.displayName}`);
     logoutButton.classList.remove('hidden');
     loginButton.classList.add('hidden');
     registerButton.classList.add('hidden');
@@ -95,5 +109,23 @@ firebase.auth().onAuthStateChanged((user) => {
     loginButton.classList.remove('hidden');
     registerButton.classList.remove('hidden');
     userAvatar.classList.add('hidden');
+  }
+});
+
+// Obter a referência ao elemento <span id="user-name">
+const userNameSpan = document.getElementById('user-name');
+
+// Monitorar o estado de autenticação
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // Usuário está logado
+    const displayName = user.displayName || user.email;
+
+    // Atualizar o conteúdo do <span> com o nome do usuário
+    userNameSpan.textContent = displayName;
+  } else {
+    // Usuário não está logado
+    // Limpar o conteúdo do <span>
+    userNameSpan.textContent = '';
   }
 });

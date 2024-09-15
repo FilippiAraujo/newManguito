@@ -57,6 +57,7 @@
                         <dialog id="registerModal" class="modal modal-bottom sm:modal-middle">
                             <div class="modal-box">
                                 <div id="register-form" class="flex flex-col justify-center mb-6">
+                                    <input type="text" id="register-name" placeholder="Nome" class="input input-bordered mb-2" />
                                     <input type="email" id="register-email" placeholder="Email" class="input input-bordered mb-2" />
                                     <input type="password" id="register-password" placeholder="Senha" class="input input-bordered mb-2" />
                                     <button id="register-submit-button" class="btn btn-primary">Registrar</button>
@@ -93,8 +94,12 @@
 
     <div class="p-8">
         <!-- Welcome Message -->
-        <h1 class="text-3xl font-semibold">Welcome back, <span class="text-blue-500">Filippi</span>. Here’s what your friends have been watching...</h1>
-
+        <h1 class="text-3xl font-semibold">
+            Bem Vindo de Volta, 
+            <span id="user-name" class="text-blue-500"></span>.
+            Aqui estão algumas novidades!
+          </h1>
+          
         <!-- Movies List -->
         <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             <!-- Movie Card -->
