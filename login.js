@@ -1,15 +1,22 @@
 // login.js
 
 // Variável global para o usuário atual
-var currentUser = null;
+window.currentUser = null;
 
 // Referências aos elementos do DOM
 const loginButton = document.getElementById('login-button');
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password');
+const logoutButton = document.getElementById('logout-button');
+const registerButton = document.getElementById('register-button');
+const userAvatar = document.getElementById('user-avatar');
 const userInfo = document.getElementById('user-info');
 const loginModal = document.getElementById('loginModal');
-const logoutButton = document.getElementById('logout-button');
+const loginSubmitButton = document.getElementById('login-submit-button');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const registerModal = document.getElementById('registerModal');
+const registerSubmitButton = document.getElementById('register-submit-button');
+const registerEmail = document.getElementById('register-email');
+const registerPassword = document.getElementById('register-password');
 
 // Função para exibir mensagens
 function showMessage(message) {
@@ -17,7 +24,7 @@ function showMessage(message) {
 }
 
 // Evento de clique no botão de login
-loginButton.addEventListener('click', () => {
+loginSubmitButton.addEventListener('click', () => {
   const email = emailInput.value;
   const password = passwordInput.value;
 
@@ -45,32 +52,8 @@ logoutButton.addEventListener('click', () => {
   });
 });
 
-// Monitorar o estado de autenticação
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    // Usuário está logado
-    currentUser = user; // Armazenar o objeto do usuário
-    showMessage(`Usuário logado: ${user.email}`);
-    logoutButton.classList.remove('hidden');
-  } else {
-    // Usuário não está logado
-    currentUser = null;
-    showMessage('Nenhum usuário logado.');
-    logoutButton.classList.add('hidden');
-  }
-
-  // **Remova a chamada para handleUserData(user)**
-  // Não precisamos chamar handleUserData aqui
-});
-
-// Referências aos elementos de registro
-const registerButton = document.getElementById('register-button');
-const registerEmail = document.getElementById('register-email');
-const registerPassword = document.getElementById('register-password');
-const registerModal = document.getElementById('registerModal');
-
 // Evento de clique no botão de registro
-registerButton.addEventListener('click', () => {
+registerSubmitButton.addEventListener('click', () => {
   const email = registerEmail.value;
   const password = registerPassword.value;
 
@@ -87,4 +70,30 @@ registerButton.addEventListener('click', () => {
       const errorMessage = error.message;
       showMessage(`Erro: ${errorMessage}`);
     });
+});
+
+// Monitorar o estado de autenticação
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // Usuário está logado
+    currentUser = user; // Armazenar o objeto do usuário
+    showMessage(`Usuário logado: ${user.email}`);
+    logoutButton.classList.remove('hidden');
+    loginButton.classList.add('hidden');
+    registerButton.classList.add('hidden');
+    userAvatar.classList.remove('hidden');
+    // Opcional: Atualizar a imagem do avatar se disponível
+    // if (user.photoURL) {
+    //   const avatarImg = userAvatar.querySelector('img');
+    //   avatarImg.src = user.photoURL;
+    // }
+  } else {
+    // Usuário não está logado
+    currentUser = null;
+    showMessage('Nenhum usuário logado.');
+    logoutButton.classList.add('hidden');
+    loginButton.classList.remove('hidden');
+    registerButton.classList.remove('hidden');
+    userAvatar.classList.add('hidden');
+  }
 });
