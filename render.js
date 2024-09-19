@@ -10,6 +10,7 @@ if (typeof currentUser === 'undefined' || currentUser === null) {
     { titulo: 'One Piece', volume: '3', imagem: '/assets/capaOnePieceVolTreswebp.webp', rating: 0, possui: false },
     { titulo: 'One Piece', volume: '4', imagem: '/assets/capaOnePieceVolQuatro.webp', rating: 0, possui: false },
     { titulo: 'One Piece', volume: '5', imagem: '/assets/capaOnePieceVolCinco.webp', rating: 0, possui: false },
+    { titulo: 'One Piece', volume: '6', imagem: '/assets/capaOnePieceVolSeis.webp', rating: 0, possui: false },
   ];
   
   // Referência ao elemento volumeList
@@ -27,16 +28,46 @@ if (typeof currentUser === 'undefined' || currentUser === null) {
       console.error('Erro ao salvar no Firestore: ', error);
     });
   }
+
+  // Função para mesclar defaultVolumes com os dados do usuário
+function mergeVolumes(defaultVolumes, userData) {
+  const userDataMap = {};
+  userData.forEach((item) => {
+    userDataMap[item.volume] = item;
+  });
+
+  const mergedData = defaultVolumes.map((item) => {
+    if (userDataMap[item.volume]) {
+      // Se o volume existe nos dados do usuário, usa esse
+      return userDataMap[item.volume];
+    } else {
+      // Caso contrário, usa o volume padrão
+      return item;
+    }
+  });
+
+  // Opcional: adiciona volumes que estão nos dados do usuário mas não nos defaultVolumes
+  userData.forEach((item) => {
+    if (!defaultVolumes.find((defaultItem) => defaultItem.volume === item.volume)) {
+      mergedData.push(item);
+    }
+  });
+
+  return mergedData;
+}
+
   
   // Função para carregar do Firestore
   function loadFromFirestore(userId) {
     db.collection('users').doc(userId).get()
       .then((doc) => {
         if (doc.exists) {
-          const data = doc.data().volumes;
-          renderVolumes(data);
+          const userData = doc.data().volumes;
+          // Mescla os volumes padrão com os dados do usuário
+          const mergedData = mergeVolumes(defaultVolumes, userData);
+          renderVolumes(mergedData);
         } else {
-          // Se não houver dados, use os volumes padrão
+          // Se não houver dados do usuário, renderiza os volumes padrão
           renderVolumes(defaultVolumes);
         }
       })
@@ -45,6 +76,7 @@ if (typeof currentUser === 'undefined' || currentUser === null) {
         renderVolumes(defaultVolumes);
       });
   }
+  
   
   // Função para renderizar os volumes
   function renderVolumes(data) {
