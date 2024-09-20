@@ -5,12 +5,14 @@ if (typeof currentUser === 'undefined' || currentUser === null) {
   
   // Dados padrão dos volumes
   const defaultVolumes = [
-    { titulo: 'One Piece', volume: '1', imagem: '/assets/capaOnePieceVolUm.webp', rating: 0, possui: false },
-    { titulo: 'One Piece', volume: '2', imagem: '/assets/capaOnePieceVolDois.webp', rating: 0, possui: false },
-    { titulo: 'One Piece', volume: '3', imagem: '/assets/capaOnePieceVolTreswebp.webp', rating: 0, possui: false },
-    { titulo: 'One Piece', volume: '4', imagem: '/assets/capaOnePieceVolQuatro.webp', rating: 0, possui: false },
-    { titulo: 'One Piece', volume: '5', imagem: '/assets/capaOnePieceVolCinco.webp', rating: 0, possui: false },
-    { titulo: 'One Piece', volume: '6', imagem: '/assets/capaOnePieceVolSeis.webp', rating: 0, possui: false },
+    { serie: 'One Piece', titulo: 'One Piece', volume: '1', imagem: '/assets/capaOnePieceVolUm.webp', rating: 0, possui: false },
+    { serie: 'One Piece', titulo: 'One Piece', volume: '2', imagem: '/assets/capaOnePieceVolDois.webp', rating: 0, possui: false },
+    { serie: 'One Piece', titulo: 'One Piece', volume: '3', imagem: '/assets/capaOnePieceVolTreswebp.webp', rating: 0, possui: false },
+    { serie: 'One Piece', titulo: 'One Piece', volume: '4', imagem: '/assets/capaOnePieceVolQuatro.webp', rating: 0, possui: false },
+    { serie: 'One Piece', titulo: 'One Piece', volume: '5', imagem: '/assets/capaOnePieceVolCinco.webp', rating: 0, possui: false },
+    { serie: 'One Piece', titulo: 'One Piece', volume: '6', imagem: '/assets/capaOnePieceVolSeis.webp', rating: 0, possui: false },
+
+    { serie: 'Naruto', titulo: 'Naruto', volume: '1', imagem: '/assets/naruto/capaNarutoVolUm.webp', rating: 0, possui: false},
   ];
   
   // Referência ao elemento volumeList
@@ -20,7 +22,7 @@ if (typeof currentUser === 'undefined' || currentUser === null) {
   function saveToFirestore(userId, data) {
     db.collection('users').doc(userId).set({
       volumes: data
-    })
+    }, { merge: false }) // Adicione { merge: false } para substituir os dados existentes
     .then(() => {
       console.log('Dados salvos com sucesso no Firestore!');
     })
@@ -28,33 +30,41 @@ if (typeof currentUser === 'undefined' || currentUser === null) {
       console.error('Erro ao salvar no Firestore: ', error);
     });
   }
+  
+  
 
   // Função para mesclar defaultVolumes com os dados do usuário
-function mergeVolumes(defaultVolumes, userData) {
-  const userDataMap = {};
-  userData.forEach((item) => {
-    userDataMap[item.volume] = item;
-  });
-
-  const mergedData = defaultVolumes.map((item) => {
-    if (userDataMap[item.volume]) {
-      // Se o volume existe nos dados do usuário, usa esse
-      return userDataMap[item.volume];
-    } else {
-      // Caso contrário, usa o volume padrão
-      return item;
-    }
-  });
-
-  // Opcional: adiciona volumes que estão nos dados do usuário mas não nos defaultVolumes
-  userData.forEach((item) => {
-    if (!defaultVolumes.find((defaultItem) => defaultItem.volume === item.volume)) {
-      mergedData.push(item);
-    }
-  });
-
-  return mergedData;
-}
+  function mergeVolumes(defaultVolumes, userData) {
+    const userDataMap = {};
+    userData.forEach((item) => {
+      const key = `${item.serie}-${String(item.volume)}`;
+      userDataMap[key] = item;
+    });
+  
+    const mergedData = defaultVolumes.map((item) => {
+      const key = `${item.serie}-${String(item.volume)}`;
+      if (userDataMap[key]) {
+        console.log(`Mesclando dados do usuário para: ${key}`);
+        return { ...item, ...userDataMap[key] }; // Mescla os dados do volume padrão com os do usuário
+      } else {
+        return item;
+      }
+    });
+  
+    // Adiciona volumes que estão nos dados do usuário mas não nos volumes padrão
+    userData.forEach((item) => {
+      const key = `${item.serie}-${String(item.volume)}`;
+      if (!defaultVolumes.find((defaultItem) => `${defaultItem.serie}-${String(defaultItem.volume)}` === key)) {
+        console.log(`Adicionando novo volume dos dados do usuário: ${key}`);
+        mergedData.push(item);
+      }
+    });
+  
+    return mergedData;
+  }
+  
+  
+  
 
   
   // Função para carregar do Firestore
@@ -63,7 +73,6 @@ function mergeVolumes(defaultVolumes, userData) {
       .then((doc) => {
         if (doc.exists) {
           const userData = doc.data().volumes;
-          // Mescla os volumes padrão com os dados do usuário
           const mergedData = mergeVolumes(defaultVolumes, userData);
           renderVolumes(mergedData);
         } else {
@@ -76,6 +85,7 @@ function mergeVolumes(defaultVolumes, userData) {
         renderVolumes(defaultVolumes);
       });
   }
+  
   
   
   // Função para renderizar os volumes
