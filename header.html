@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <!-- Metadados -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manguito Tracker</title>
-    <link href="/src/output.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/logoManguito.png">
-</head>
+    <head>
+        <!-- Metadados -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manguito Tracker</title>
+        <link href="/src/output.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/assets/logoManguito.png">
+    </head>
 <body>
-
     <!-- Cabeçalho -->
     <header class="bg-white">
         <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-            <a href="index.html">
-                <img src="assets/logoManguito.png" class="size-20"/>
+            <a href="/index.html">
+                <img src="/assets/logoManguito.png" class="size-20"/>
             </a>  
             <div class="flex flex-1 items-center justify-end md:justify-between">
                 <nav aria-label="Global" class="hidden md:block">
@@ -75,7 +74,7 @@
                           <!-- Avatar do Usuário (aparece apenas quando logado) -->
                         <div id="user-avatar" class="avatar hidden">
                         <div class="ring-primary ring-offset-base-100 w-12 rounded-full ring ring-offset-2">
-                            <img src="assets/logoManguito.png" />
+                            <img src="/assets/logoManguito.png" />
                         </div>
                     </div>
                     </div>
@@ -91,112 +90,5 @@
             </div>
         </div>
     </header>
-
-    <div class="p-8">
-        <!-- Welcome Message -->
-        <h1 class="text-3xl font-semibold">
-            Bem Vindo de Volta, 
-            <span id="user-name" class="text-blue-500"></span>.
-            Aqui estão algumas novidades!
-          </h1>
-          
-        <!-- Movies List -->
-        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            <!-- Movie Card -->
-            <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-                <a href="/paginasFranquias/paginaOnePiece.html">
-                    <img src="assets/capaOnePieceVolUm.webp" alt="Bear Story" class="rounded-lg">
-                </a>
-                <div class="mt-3">
-                    <h3 class="text-lg font-bold">Bear Story</h3>
-                    <p class="text-sm text-gray-400">May - Sep 14</p>
-                </div>
-            </div>
-            
-
-            <!-- Movie Card -->
-            <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/150x225" alt="Blink Twice" class="rounded-lg">
-                <div class="mt-3">
-                    <h3 class="text-lg font-bold">Blink Twice</h3>
-                    <p class="text-sm text-gray-400">san - Sep 13</p>
-                </div>
-            </div>
-
-            <!-- Movie Card -->
-            <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/150x225" alt="Irena's Vow" class="rounded-lg">
-                <div class="mt-3">
-                    <h3 class="text-lg font-bold">Irena's Vow</h3>
-                    <p class="text-sm text-gray-400">fapm - Sep 13</p>
-                </div>
-            </div>
-
-            <!-- Movie Card -->
-            <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/150x225" alt="Rebel Ridge" class="rounded-lg">
-                <div class="mt-3">
-                    <h3 class="text-lg font-bold">Rebel Ridge</h3>
-                    <p class="text-sm text-gray-400">André Nogueira - Sep 12</p>
-                </div>
-            </div>
-
-            <!-- Movie Card -->
-            <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/150x225" alt="Beetlejuice" class="rounded-lg">
-                <div class="mt-3">
-                    <h3 class="text-lg font-bold">Beetlejuice</h3>
-                    <p class="text-sm text-gray-400">Manny Dhinsa - Sep 12</p>
-                </div>
-            </div>
-
-            <!-- Movie Card -->
-            <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/150x225" alt="2067" class="rounded-lg">
-                <div class="mt-3">
-                    <h3 class="text-lg font-bold">2067</h3>
-                    <p class="text-sm text-gray-400">Pavel - Sep 11</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Informação do Usuário -->
-    <div id="user-info" class="text-center mb-4 text-lg font-bold"></div>
-
-    <!-- Seção de Volume -->
-    <div id="volume-section" class="flex justify-center p-6">
-        <ul id="volume-list" class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-screen-lg">
-        </ul>
-    </div>
-
-    <!-- Scripts do Firebase (versão compat) -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
-    <script>
-        // Configuração do Firebase
-        const firebaseConfig = {
-            apiKey: "AIzaSyDEdj7Y-_i2zs5tIxgND8onSTHT1d0zY0U",
-            authDomain: "testemangas.firebaseapp.com",
-            projectId: "testemangas",
-            storageBucket: "testemangas.appspot.com",
-            messagingSenderId: "1067822983743",
-            appId: "1:1067822983743:web:2ecc2ff81e0fd77eff668a",
-            measurementId: "G-ZYSHK6FQL8"
-        };
-
-        // Inicialize o Firebase
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-
-    </script>
-
-    <!-- Seus scripts personalizados -->
-    <script src="login.js"></script>
-    <script src="render.js"></script>
-    <script src="mangas.js"></script>
-
-
 </body>
 </html>
