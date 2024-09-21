@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manguito Tracker</title>
+    <link href="/src/output.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/logoManguito.png">
+
+    <script>
+        function toggleView(view) {
+            const gridView = document.getElementById('grid-view');
+            const listView = document.getElementById('list-view');
+            
+            if (view === 'grid') {
+                gridView.style.display = 'flex';
+                listView.style.display = 'none';
+            } else {
+                gridView.style.display = 'none';
+                listView.style.display = 'flex';
+            }
+        }
+    </script>
+
+</head>
+
+<body class="mx-16 flex flex-col ">
+
+    <div class="flex justify-end">
+        <ul class="menu menu-horizontal bg-base-200 rounded-box m-6">
+        <li onclick="toggleView('grid')">
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </a>
+        </li>
+        <li onclick="toggleView('list')">
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <section id="grid-view" class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"></section>
+    <section id="list-view" class="hidden flex flex-col"></section>
+   
+    <script src="testerenderdois.js"></script>
+
+
+</body>
+</html>
