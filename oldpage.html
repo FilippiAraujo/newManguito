@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        import 
+
+      
+        <title>Mangá Tracker</title>
+    </head>
+    <body class="flex flex-col">
+        <header href="index.html" class="bg-black">
+            <nav class="flex flex-row justify-between">
+                <a href="index.html" class="flex flex-row items-center pl-6">
+                    <section class="flex flex-row items-center pl-6">
+                        <svg class="flex size-20" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g> 
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M64.9 595.4a447.2 78.5 0 1 0 894.4 0 447.2 78.5 0 1 0-894.4 0Z" fill="#E18C16"></path>
+                                <path d="M512.1 516.9c-18.4 0-36.6 0.2-54.4 0.6 221.3 4.7 392.8 37.8 392.8 77.9 0 40.1-171.5 73.2-392.8 77.9 17.8 0.4 36 0.6 54.4 0.6 247 0 447.2-35.1 447.2-78.5 0-43.3-200.2-78.5-447.2-78.5z" fill="#F19B31"></path>
+                                <path d="M541.3 349.7h-58.9c-101 0-183.7 82.7-183.7 183.7v76.8h426.4v-76.8c0-101-82.7-183.7-183.8-183.7z" fill="#F1B23B"></path>
+                                <path d="M541.3 349.7h-35.5c101 0 183.7 82.7 183.7 183.7v76.8H725v-76.8c0.1-101-82.6-183.7-183.7-183.7z" fill="#F3C36E"></path>
+                                <path d="M298.7 526.4h426.4v45.3H298.7z" fill="#F15322"></path>
+                            </g>
+                        </svg>
+                        <div class="text-2xl pl-2"><span class="font-thin">| Manguito </span><span class="font-bold">Tracker</span></div>
+                    </section>
+                </a>
+                <div class="flex items-center">
+                    <div class="form-control">
+                      <input id="caixaDeBusca" type="text" placeholder="Buscar" class="input input-bordered w-24 md:w-auto" />
+                      <div id="resultadosDeBusca"></div>
+                    </div>
+                <section class="p-8 ">
+                    <div class="avatar online">
+                        <div class="w-14 rounded-full">
+                          <img src="assets/perola.jpeg" />
+                        </div>
+                      </div>
+                </section>
+            </nav>
+        </header>
+
+        <section class="p-6"> <!--One Piece-->
+
+            <div class="divider divider-start"><a>One Piece</a>|<a class="underline" href="paginaOnePieceUm.html">Ver Mais</a></div>
+
+            <div class="flex flex-row pl-4 gap-5 overflow-x-auto">
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 1-->
+                    <img id="openModal"src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_opk3tu05412u94jhf0aqcon303/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 2-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_2g4oeeie8t2h9892dnbpfcbs3j/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" id="star5" name="rating" value="5" class="mask mask-star-2 bg-orange-400" onclick="rateObjective(5)" />
+                                <input type="radio" id="star4" name="rating" value="4" class="mask mask-star-2 bg-orange-400" onclick="rateObjective(4)" />
+                                <input type="radio" id="star3" name="rating" value="3" class="mask mask-star-2 bg-orange-400" onclick="rateObjective(3)" />
+                                <input type="radio" id="star2" name="rating" value="2" class="mask mask-star-2 bg-orange-400" onclick="rateObjective(2)" />
+                                <input type="radio" id="star1" name="rating" value="1" class="mask mask-star-2 bg-orange-400" onclick="rateObjective(1)" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_aigd9goum15unbjtc6b7qauf7t/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_g7q16kopjl6rpd11h42eaase1m/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_3odjie6c2p2uteep5q1mfm4d3b/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_jq4jnj4tkh325cmpoo2das5o3t/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://m.media-amazon.com/images/I/51YIMNMlagL._SY445_SX342_.jpg" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://m.media-amazon.com/images/I/61PRgkkQtiL._SY445_SX342_.jpg" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_epdgn1agb91u1frlvdfv1bah6a/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://m.media-amazon.com/images/I/91qqsbzWu+L._SY466_.jpg" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        
+        </section>
+
+        <section class="p-6"> <!--Dragon Ball-->
+
+            <div class="divider divider-start">Dragon Ball</div>
+
+            <div class="flex flex-row pl-4 gap-5 overflow-x-auto">
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img id="openModal"src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_ljvs7cq3m962l8jvpodfg17068/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_9q1f5si4v909fba3lo7bovsq3u/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_t5lj1ipo8t6vt3uk09m1h7uc35/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_kc1b08cmgt6h7ed5uefd0hi21l/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_879366-MLU69767648849_062023-O.webp" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_mkfgfdjafh28tfhcrk7he4kq67/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_7pm9hl29qh0bd8h26srb4mud6i/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_7uv0a8646p6oj7vejtu1a90b7i/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_sm8l5m43c958pbjkdvdilpce5t/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_9u38lvlhtt5en79qnbhb7e9e27/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+            </div>
+
+         </section>
+
+         <section class="p-6"> <!--Berserk -->
+
+            <div class="divider divider-start">Berserk</div>
+
+            <div class="flex flex-row pl-4 gap-5 overflow-x-auto">
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img id="openModal"src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_hi166n5t59739bhnp54crgo75h/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://m.media-amazon.com/images/I/61z1aWBTm7L._SY385_.jpg" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://storage.geralgeek.com.br/images/venda/Panini-659d5d17d1a1f.webp" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_ftnskvl0rt6ob59tej6km08a4g/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_ghclb4r5nh3mj6jdok29etaa3s/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_eviji4vdvt0ml339j4pgrn7o4q/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://m.media-amazon.com/images/I/71tDerSNotL._SY385_.jpg" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_e6jac4i8et59579s8f5lleut3u/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_6cadp6t8f14e5bgqjjoahdr304/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="hover:cursor-pointer duration-300 ease-in-out hover:scale-105 bg-[#2B333C] rounded-b-lg mb-4"> <!-- one piece 3-->
+                    <img src="https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_3qdcbiil5d03napr253l68m03a/-S897-FWEBP" class="max-w-36 shadow-2xl" />
+                    <div class="flex justify-center pt-2 pb-2 gap-3">
+                        <label class="swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox"/>
+                            <svg class="size-5 swap-on" fill="#28c82a" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.84 -3.84 31.68 31.68" enable-background="new 0 0 24 24" xml:space="preserve" stroke="#28c82a" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata> <sfw xmlns="&amp;ns_sfw;"> <slices> </slices> <slicesourcebounds width="505" height="984" bottomleftorigin="true" x="0" y="-984"> </slicesourcebounds> </sfw> </metadata> <g> <g> <g> <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 S17.5,2,12,2z"></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3,3c0.4,0.4,0.4,1,0,1.4C11.5,15.9,11.3,16,11,16z "></path> </g> </g> <g> <g> <path d="M11,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l6-6c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C11.5,15.9,11.3,16,11,16z "></path> </g> </g> </g> </g></svg>     
+                            <svg class="size-5 swap-off" fill="#ff0000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-34.96 -34.96 161.92 161.92" enable-background="new 0 0 92 92" xml:space="preserve" stroke="#ff0000" stroke-width="0.00092"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_1517_" d="M78.5,13.5c-17.9-17.9-47.1-17.9-65.1,0c-17.9,17.9-17.9,47.1,0,65.1c9,9,20.8,13.5,32.5,13.5 c11.8,0,23.6-4.5,32.5-13.5C96.5,60.6,96.5,31.4,78.5,13.5z M19.1,72.9C5.3,59,4.4,37,16.4,22.1l53.5,53.5 C55,87.6,33,86.8,19.1,72.9z M75.6,69.9L22.1,16.4C29,10.8,37.5,8,46,8c9.7,0,19.5,3.7,26.9,11.1C86.7,33,87.6,55,75.6,69.9z"></path> </g></svg>                                
+                        </label>
+                        <div class="rating rating-sm">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"  />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                    </div>    
+                </div>
+
+            </div>
+
+         </section>
+
+
+        <footer class="footer footer-center mt-24 p-8 bg-black text-primary-content">
+            <aside>
+                <section class="flex flex-row items-center pl-6">
+                    <svg class="flex size-20" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g> 
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M64.9 595.4a447.2 78.5 0 1 0 894.4 0 447.2 78.5 0 1 0-894.4 0Z" fill="#E18C16"></path>
+                            <path d="M512.1 516.9c-18.4 0-36.6 0.2-54.4 0.6 221.3 4.7 392.8 37.8 392.8 77.9 0 40.1-171.5 73.2-392.8 77.9 17.8 0.4 36 0.6 54.4 0.6 247 0 447.2-35.1 447.2-78.5 0-43.3-200.2-78.5-447.2-78.5z" fill="#F19B31"></path>
+                            <path d="M541.3 349.7h-58.9c-101 0-183.7 82.7-183.7 183.7v76.8h426.4v-76.8c0-101-82.7-183.7-183.8-183.7z" fill="#F1B23B"></path>
+                            <path d="M541.3 349.7h-35.5c101 0 183.7 82.7 183.7 183.7v76.8H725v-76.8c0.1-101-82.6-183.7-183.7-183.7z" fill="#F3C36E"></path>
+                            <path d="M298.7 526.4h426.4v45.3H298.7z" fill="#F15322"></path>
+                        </g>
+                    </svg>
+                    <div class="text-2xl pl-2 text-white"><span class="font-thin">| Manguito </span><span class="font-bold">Tracker</span></div>
+                </section>              
+                <p class="font-bold text-white">
+                Manguito Tracker Ltd. <br>Promovendo o controle dos seus mangás desde 2024
+              </p> 
+              <p class="text-white">Copyright © 2024 - Todos os direitos reservados</p>
+            </aside> 
+            <nav>
+              <div class="grid grid-flow-col gap-4 text-white">
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+              </div>
+            </nav>
+          </footer>
+
+
+
+
+
+        <!-- modal -->
+        <div id="myModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+            <div class="relative top-20 mx-auto p-5 w-max shadow-lg rounded-md">
+                <div class="mt-3 text-center">
+                    <div class="card w-96 bg-black shadow-xl">
+                        <figure><img src="https://sm.ign.com/t/ign_br/tv/o/one-piece-/one-piece-2_1xby.1200.jpg" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">One Piece Volume 1</h2>
+                            <p>Qual o status desse mangá?</p>
+                            <div class="flex justify-center">
+                                <p class="flex gap-6 justify-center pt-6 text-sm text-gray-500">Você possui esse mangá? <input id="meuCheckbox" type="checkbox" class="checkbox"></p>
+                                <div class="items-center px-4 py-3">
+                                    <button id="closeModal" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700 transition duration-300">
+                                    Fechar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="firebase-config.js"></script>
+
+        <script>
+   document.addEventListener('DOMContentLoaded', () => {
+  // Seleciona todos os checkboxes e radio buttons
+  const inputs = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+
+  // Itera sobre eles para configurar seus estados iniciais e adicionar listeners
+  inputs.forEach(input => {
+    const estadoSalvo = localStorage.getItem(input.id); // Assume que cada input tem um ID único
+
+    // Configura o estado inicial com base no valor salvo
+    if(input.type === "checkbox") {
+      input.checked = estadoSalvo === "true";
+    } else if(input.type === "radio" && estadoSalvo === "true") {
+      input.checked = true;
+    }
+
+    // Adiciona um event listener para salvar o estado quando ele mudar
+    input.addEventListener('change', () => {
+      if(input.type === "checkbox") {
+        localStorage.setItem(input.id, input.checked);
+      } else if(input.type === "radio") {
+        // Para radio buttons, primeiro desmarque todos os radio buttons com o mesmo nome
+        document.querySelectorAll(`input[name="${input.name}"]`).forEach(radio => {
+          localStorage.setItem(radio.id, "false");
+        });
+        // Então, salve o estado do selecionado como true
+        localStorage.setItem(input.id, input.checked);
+      }
+    });
+  });
+});
+
+
+        </script>
+
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var openModalImg = document.getElementById("openModal");
+            var closeModalBtn = document.getElementById("closeModal");
+          
+            openModalImg.onclick = function() {
+              modal.classList.remove("hidden");
+            }
+          
+            closeModalBtn.onclick = function() {
+              modal.classList.add("hidden");
+            }
+          
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.classList.add("hidden");
+              }
+            }
+          </script>
+
+        <script type="module">
+
+            import { db } from './firebase-config';
+            import { doc, updateDoc, arrayUnion, getDoc } from 'firebase/firestore';
+
+            function rateObjective(rating) {
+                const objectiveId = "uniqueObjectiveId"; // Substitua por um identificador único para o objetivo
+                const userId = "uniqueUserId"; // Substitua pelo ID do usuário logado
+
+                const ratingRef = doc(db, "ratings", objectiveId);
+                updateDoc(ratingRef, {
+                    ratings: arrayUnion({ userId: userId, rating: rating })
+                }).then(() => {
+                    console.log("Rating added");
+                }).catch((error) => {
+                    console.error("Error writing rating: ", error);
+                });
+            }
+
+            // Função para recuperar e calcular a média das avaliações
+            function getAverageRating(objectiveId) {
+                const ratingRef = doc(db, "ratings", objectiveId);
+                getDoc(ratingRef).then((doc) => {
+                    if (doc.exists()) {
+                        const data = doc.data();
+                        let total = 0;
+                        data.ratings.forEach(item => {
+                            total += item.rating;
+                        });
+                        const averageRating = total / data.ratings.length;
+                        console.log("Average Rating: ", averageRating);
+                    } else {
+                        console.log("No ratings found");
+                    }
+                }).catch((error) => {
+                    console.error("Error retrieving ratings: ", error);
+                });
+            }
+
+        </script>
+          
+    </body>
+</html>
